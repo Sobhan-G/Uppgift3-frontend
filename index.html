@@ -1,249 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>HTML DOM (Document Object Model)</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-</head>
-<body id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">DOM-Document Object Model</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dom">DOM</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#node">Noder</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#src">Källor</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Masthead-->
-<header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-        <div class="mx-auto text-center">
-            <h1 class="mx-auto my-0 text-uppercase">(Document Object Model)</h1>
-            <h2 class="text-white-50 mx-auto mt-2 mb-5">HTML DOM (Document Object Model).</h2>
-            <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
-        </div>
-    </div>
-</header>
-
-<!-- Dokumentobjektmodellen -->
-<section class="about-section text-center" id="dom">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="text-white mb-4">Dokumentobjektmodellen</h2>
-                <p class="text-white-50">
-
-                    Dokumentobjektmodellen (Document Object Model, DOM) är ett programmeringsgränssnitt (Application Programming Interface, API)
-                    för bl.a. HTML och XML-dokument.
-                    Genom att DOM översätter dokumentet till noder och objekt kan programmeringsspråk kopplas till dokumentet och ändra dess struktur,
-                    stil och innehåll.
-
-                    <img src="assets/img/DOM TREE" alt="this filetype not supported">   <br>
-
-                    HTML DOM är en standard modell för programmering för HTML. Den definerar: <br>
-                    <br>
-                    <br>
-                    <br>
-                    •HTML element som objekt <br>
-                    •Egenskaperna för alla HTML element <br>
-                    •Metoder att komma åt alla HTML element <br>
-                    •events för alla HTML element <br>
-                    HTML DOM är alltså en standard för hur man lägger till, tar bort, ändrar eller hämtar HTML element. <br>
-                    <br>
-                    <br>
-                    •JavaScript kan ändra alla html element på sidan <br>
-                    •JavaScript kan ändra alla HTML attribut på sidan <br>
-                    •JavaScript kan ändra alla CSS stilar på sidan <br>
-                    •JavaScript kan ta bort existerande Html element och attribut. <br>
-                    •JavaScript kan lägga till nya Html element och attribute. <br>
-                    •JavaScript kan integrera med alla existerande html element på sidan. (react to all existing HTML events in the page) <br>
-                    •JavaScript kan skapa nya html events på sidan. <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    JavaScript HTML DOM – CSS <br>
-                    Du kan ändra en sidas CSS genom ett så kallat event <br>
-                    Exempel på HTML events: <br>
-                    När en användarna klickar med musen <br>
-                    När en Webbsida håller på laddar <br>
-                    När en bild laddas/laddats <br>
-                    När musen rör sig “över/på” ett element <br>
-                    När en användarna matar in något <br>
-                    När en HTML form laddas upp <br>
-                    När en användarna trycker på en tagent. <br>
-                    <br>
-                    <br>
-                    <br>
-                    Event Bubbling or Event Capturing? <br>
-                    <br>
-                    Event-prioriteringar är ett sätt att prioritera elementen när ett event sker. <br>
-                    <br>
-                    Det finns 2 olika sätt att göra Event-prioriteringar i HTML DOM Bubbling och Capturing <br>
-                    Om du har en (p) element i en (div) och användaren klickar på (p) elementet vilket element ska hanteras först!? <br>
-                    <br>
-                    <br>
-                    I bubbling så hanteras den inre elementet först sen den yttre : först (p) sedan (div) <br>
-                    <br>
-                    <br>
-                    I capturing  så hanteras den yttre elementet först sen den inre : först  (div) sedan (p). <br>
-                    <br>
-                    Med addEventListener metoder kan du specificera prioriteringen genom att använda ”useCapture” parameter. <br>
-                    Default värdet är falsk, Vilket gör att den använder bubbling prioriteringen, När värdet är Sant används i stället Capture prioriteringen först. <br>
-
-                </p>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>DOM (Document Object Model,)</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">DOM (Document Object Model)</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dom">DOM</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#node">Noder</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#src">Källor</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="text-white mb-4">Historik</h2>
-                <p class="text-white-50">
-                    DOM designades för att vara plattformsoberoende och rekommenderas sedan 1998 av W3C. Första versionen av DOM stöddes av Netscape 3 och Internet Explorer 3 (1996).
-                </p>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center">
+                <div class="mx-auto text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">DOM (Document Object Model)</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">DOM DocumentObjectModel)</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </header>
 
-<section class="projects-section bg-light">
-    <div class="container">
+        <!-- Dokumentobjektmodellen -->
+        <section class="about-section text-center" id="dom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">Dokumentobjektmodellen</h2>
+                        <p class="text-white-50">
+                            Dokumentobjektmodellen (Document Object Model, DOM) är ett programmeringsgränssnitt (Application Programming Interface, API) för bl.a. HTML och XML-dokument. Genom att DOM översätter dokumentet till noder och objekt kan programmeringsspråk kopplas till dokumentet och ändra dess struktur, stil och innehåll. <br>
+                             
+                           <img src="dom-modell-liggande.svg" alt="">     
+                        </p>
+                    </div>
+                </div>
 
-        <!-- Project One Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-lg-6"><img class="img-fluid" src="https://image.freepik.com/free-vector/artificial-neural-network-training-algorithm-processing-speech-recognition-identity-verification-information-handling-humanoid-cyborg-vector-isolated-concept-metaphor-illustration_335657-1996.jpg" alt="Illustration av en webbläsare som pratar med en människa" title="Källa: Freepik"></div>
-            <div class="col-lg-6">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">Historik</h2>
+                        <p class="text-white-50">
+                            DOM designades för att vara plattformsoberoende och rekommenderas sedan 1998 av W3C. Första versionen av DOM stöddes av Netscape 3 och Internet Explorer 3 (1996).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="projects-section bg-light">
+            <div class="container">
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Vad är DOM?</h4>
+                                    <p class="mb-0 text-white-50">
+                                        HTML DOM är en standard modell för programmering för HTML. Den definerar: <br>
+                                        •HTML element som objekt <br>
+                                        •Egenskaperna för alla HTML element <br> 
+                                        •Metoder att komma åt alla HTML element <br>
+                                        •events för alla HTML element <br>
+                                    </p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">JavaScript</h4>
+                                    <p class="mb-0 text-white-50">
+
+                                        •JavaScript kan ändra alla html element på sidan <br>
+                                        •JavaScript kan ändra alla HTML attribut på sidan <br>
+                                        •JavaScript kan ändra alla CSS stilar på sidan <br>
+                                        •JavaScript kan ta bort existerande Html element och attribut. <br>
+                                        •JavaScript kan lägga till nya Html element och attribute. <br>
+                                        •JavaScript kan integrera med alla existerande html element på sidan. (react to all existing HTML events in the page) <br>
+                                        •JavaScript kan skapa nya html events på sidan. <br>
+                                    </p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">DOM & JavaScript</h4>
+                                    <p class="mb-0 text-white-50">
+                                        JavaScript HTML DOM – CSS <br>
+                                        Du kan ändra en sidas CSS genom ett så kallat event <br>
+                                        Exempel på HTML events: <br>
+                                        När en användarna klickar med musen <br>
+                                        När en Webbsida håller på laddar <br>
+                                        När en bild laddas/laddats <br>
+                                        När musen rör sig “över/på” ett element <br>
+                                        När en användarna matar in något <br>
+                                        När en HTML form laddas upp <br>
+                                        När en användarna trycker på en tagent. <br></p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Event Bubbling or Event Capturing?</h4>
+                                    <p class="mb-0 text-white-50">  <br>
+                                        <br>
+                                        Event-prioriteringar är ett sätt att prioritera elementen när ett event sker. <br>
+                                        <br>
+                                        Det finns 2 olika sätt att göra Event-prioriteringar i HTML DOM Bubbling och Capturing <br>
+                                        Om du har en (p) element i en (div) och användaren klickar på (p) elementet vilket element ska hanteras först!? <br>
+                                        <br>
+                                    
+                                        I bubbling så hanteras den inre elementet först sen den yttre : först (p) sedan (div) <br>
+                                        <br>
+                                        
+                                        I capturing  så hanteras den yttre elementet först sen den inre : först  (div) sedan (p). <br> 
+                                        <br>
+                                        Med addEventListener metoder kan du specificera prioriteringen genom att använda ”useCapture” parameter. <br>
+                                        Default värdet är falsk, Vilket gör att den använder bubbling prioriteringen, När värdet är Sant används i stället Capture prioriteringen först. <br>
+                                        </p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Så funkar DOM</h4>
+                                    <p class="mb-0 text-white-50">När en webbsida läses in skapar DOM en modell av dokumenten där dess element, attribut och innehåll representeras som objekt. Modellen är strukturerad som ett träd men kan också beskrivas som en familj eftersom alla “grenar”, eller noder som de också kallas, relaterar till varandra utifrån släktskapstermer.</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Utforska DOM-strukturen</h4>
+                                    <p class="mb-0 text-white-50">Med hjälp av webbläsarens Inspektera-funktion kan användaren utforska webbsidans DOM-struktur. Markera ett särskilt element, högerklicka och välj “Inspektera”, och gå till Elements. Välj därefter Properties för att se vilka egenskaper som hör till varje document object / element.</p>
+                                    
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <!-- Project Three Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Fler funktioner i Firefox och tilläggsprogram</h4>
+                                    <p class="mb-0 text-white-50">Webbläsaren Firefox har flera funktioner för att utforska DOM-strukturen. Bl.a. kan man via Firefox få tillgång till en 3d-vy över hur trädet ser ut och hur de olika objekten relaterar till varandra. Författaren till <cite>JavaScript & jQuery</cite> rekommenderar även Firefoxtillägget Firebug.</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Dokumentobjektmodellen -->
+        <section class="about-section text-center" id="node">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">Noder</h2>
+                        <p class="text-white-50">
+                            Allt som finns i HTML-dokumentet är en nod. Det finns olika typer av noder.
+                            Hela dokumentet är en dokumentnod (document) och fungerar som utgångspunkt för alla andra noder. 
+                            Varje html-element är en elementnod (element), t.ex. html, body, h1, p. 
+                            Texten inuti ett html-element är en textnod. 
+                            Varje html-attribut är en attributnod, ex. class, href, src, id. 
+                            Alla kommentarer är kommentarsnoder.                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="projects-section bg-light">
+            <div class="container">
+                
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Nodernas relationer</h4>
+                                    <p class="mb-0 text-white-50">Noderna relaterar till varandra utifrån en familjehierarki och beskrivs med begreppen förälder, barn och syskon. En nod kan bara ha en förälder, utom root (html) som saknar förälder. En nod kan ha flera barn, där barnen är syskon till varandra.</p>
+                                    <p class="mb-0 text-white-50">H1 och p är syskon och barn till body, som är barn till html. H1:s respektive p:s barn är dess textinnehåll. Textinnehållet utgör alltså en egen nod och är inte en del av elementnoden.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Metoder och egenskaper</h4>
+                                    <p class="mb-0 text-white-50">Objekten <mark>document</mark> och <mark>window</mark> är de vanligaste gränssnitten som används i DOM.</p>
+                                    <p class="mb-0 text-white-50">Nodtyperna ärver metoder ovanifrån i trädstrukturen och kan ha egna metoder som är anpassade för den typ av data som det särskilda objektet hanterar.</p>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Three Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-12 bg-white">
                         <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Så funkar DOM</h4>
-                            <p class="mb-0 text-white-50">När en webbsida läses in skapar DOM en modell av dokumenten där dess element, attribut och innehåll representeras som objekt. Modellen är strukturerad som ett träd men kan också beskrivas som en familj eftersom alla “grenar”, eller noder som de också kallas, relaterar till varandra utifrån släktskapstermer.</p>
-                            <hr class="d-none d-lg-block mb-0 ml-0" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Two Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-lg-6"><img class="img-fluid" src="assets/img/utforska.png" alt="Skärmklipp på Inspektionsverktyget" /></div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Utforska DOM-strukturen</h4>
-                            <p class="mb-0 text-white-50">Med hjälp av webbläsarens Inspektera-funktion kan användaren utforska webbsidans DOM-struktur. Markera ett särskilt element, högerklicka och välj “Inspektera”, och gå till Elements. Välj därefter Properties för att se vilka egenskaper som hör till varje document object / element.</p>
-
-                            <hr class="d-none d-lg-block mb-0 mr-0" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Three Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-lg-6"><img class="img-fluid" src="https://image.freepik.com/free-vector/website-setup-concept-illustration_114360-1034.jpg" alt="Illustration på en robot som interagerar med en webbsida" title="Källa: Freepik"></div>
-            <div class="col-lg-6">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Fler funktioner i Firefox och tilläggsprogram</h4>
-                            <p class="mb-0 text-white-50">Webbläsaren Firefox har flera funktioner för att utforska DOM-strukturen. Bl.a. kan man via Firefox få tillgång till en 3d-vy över hur trädet ser ut och hur de olika objekten relaterar till varandra. Författaren till <cite>JavaScript & jQuery</cite> rekommenderar även Firefoxtillägget Firebug.</p>
-                            <hr class="d-none d-lg-block mb-0 ml-0" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- Dokumentobjektmodellen -->
-<section class="about-section text-center" id="node">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="text-white mb-4">Noder</h2>
-                <p class="text-white-50">
-                    Allt som finns i HTML-dokumentet är en nod. Det finns olika typer av noder.
-                    Hela dokumentet är en dokumentnod (document) och fungerar som utgångspunkt för alla andra noder.
-                    Varje html-element är en elementnod (element), t.ex. html, body, h1, p.
-                    Texten inuti ett html-element är en textnod.
-                    Varje html-attribut är en attributnod, ex. class, href, src, id.
-                    Alla kommentarer är kommentarsnoder.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="projects-section bg-light">
-    <div class="container">
-
-        <!-- Project One Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-lg-6"><img class="img-fluid" src="https://miro.medium.com/max/600/0*XmtruNKEpkTYoFHP.jpg" alt="Illustration av noder och deras relationer" title="Källa: Kenny Hom"></div>
-            <div class="col-lg-6">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
-                            <h4 class="text-white">Nodernas relationer</h4>
-                            <p class="mb-0 text-white-50">Noderna relaterar till varandra utifrån en familjehierarki och beskrivs med begreppen förälder, barn och syskon. En nod kan bara ha en förälder, utom root (html) som saknar förälder. En nod kan ha flera barn, där barnen är syskon till varandra.</p>
-                            <p class="mb-0 text-white-50">H1 och p är syskon och barn till body, som är barn till html. H1:s respektive p:s barn är dess textinnehåll. Textinnehållet utgör alltså en egen nod och är inte en del av elementnoden.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Two Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="bg-black text-center h-100 project">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right">
-                            <h4 class="text-white">Metoder och egenskaper</h4>
-                            <p class="mb-0 text-white-50">Objekten <mark>document</mark> och <mark>window</mark> är de vanligaste gränssnitten som används i DOM.</p>
-                            <p class="mb-0 text-white-50">Nodtyperna ärver metoder ovanifrån i trädstrukturen och kan ha egna metoder som är anpassade för den typ av data som det särskilda objektet hanterar.</p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Three Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-12 bg-white">
-                <div class="project-text w-100 my-auto text-center text-lg-left">
-                    <h4 class="text-black-50">Dokumentnoden</h4>
-                    <p class="mb-0 text-black-50">Nyckelordet <mark>document</mark> måste anges för att kunna gå in i underordnade noder. <br>
-
+                        <h4 class="text-black-50">Dokumentnoden</h4>
+                        <p class="mb-0 text-black-50">Nyckelordet <mark>document</mark> måste anges för att kunna gå in i underordnade noder.</p>
+                        Exempel:
                         document.anchors <br>
                         document.body <br>
                         document.documentElement <br>
@@ -254,110 +307,97 @@
                         document.links <br>
                         document.scripts <br>
                         document.title <br>
-                    </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Project Four Row-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-12 bg-white">
-                <div class="project-text">
-                    <h4 class="text-black-50">Elementnoderna</h4>
-                    <p class="mb-0 text-black-50">Olika nyckelord ger åtkomst till ett specifikt eller en grupp av element utifrån id, css-selektor eller html-tagg.</p>
-                    <p class="mb-0 text-black-50">Även nyckelord för att nå specifik artikel i en HTMLCollection eller NodeList som är arrayliknande samlingar av element.</p>
-                    <p class="mb-0 text-black-50">Det vanligaste sättet enligt W3Schools att nå ett html-element är att identifiera det med hjälp av dess id-värde. Det lättaste sättet att få tillgång till elementets innehåll är genom att använda egenskapen innerHTML. Egenskapen kan användas för att nå eller ändra valfritt html-element, inklusive html och body.</p>
-                    <br>
-                    <p class="mb-0 text-black-50">
-                        Finding HTML Elements <br>
+                <!-- Project Four Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-12 bg-white">
+                         <div class="project-text">
+                            <h4 class="text-black-50">Elementnoderna</h4>
+                            <p class="mb-0 text-black-50">Olika nyckelord ger åtkomst till ett specifikt eller en grupp av element utifrån id, css-selektor eller html-tagg.</p>
+                            <p class="mb-0 text-black-50">Även nyckelord för att nå specifik artikel i en HTMLCollection eller NodeList som är arrayliknande samlingar av element.</p>
+                            <p class="mb-0 text-black-50">Det vanligaste sättet enligt W3Schools att nå ett html-element är att identifiera det med hjälp av dess id-värde. Det lättaste sättet att få tillgång till elementets innehåll är genom att använda egenskapen innerHTML. Egenskapen kan användas för att nå eller ändra valfritt html-element, inklusive html och body.</p>
+                            <br>
+                            <p class="mb-0 text-black-50">Finding HTML Elements <br>
+                                <br>
+                                document.getElementById(id)	Find an element by element id <br>
+                                document.getElementsByTagName(name)	Find elements by tag name <br>
+                                document.getElementsByClassName(name) Find elements by class name <br></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-12 bg-white">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                        <h4 class="text-black-50">Attributnoder</h4>
+                        <p class="mb-0 text-black-50">De egenskaper som hör till html-element kan nås med specifika nyckelord och hämta, skriva eller ta bort egenskaper hos elementet.</p>
                         <br>
-                        document.getElementById(id)	Find an element by element id <br>
-                        document.getElementsByTagName(name)	Find elements by tag name <br>
-                        document.getElementsByClassName(name) Find elements by class name <br>
+                        <p class="mb-0 text-black-50">Changing HTML Elements  (Property)	<br>
+                            <br>
+                            element.innerHTML =  new html content, Change the inner HTML of an element <br>
+                            element.attribute = new value, Change the attribute value of an HTML element <br>
+                            element.style.property = new style, Change the style of an HTML element <br>
+                            <br>
+                            Change the attribute value of an HTML element <br>
+                            element.setAttribute(attribute, value) <br>
+                            
+                            
+                            Method	Description - Adding and Deleting Elements <br>
+                            document.createElement(element)	Create an HTML element <br>
+                            document.removeChild(element)	Remove an HTML element <br>
+                            document.appendChild(element)	Add an HTML element <br>
+                            document.replaceChild(new, old)	Replace an HTML element <br>
+                            document.write(text)	Write into the HTML output stream <br>
+                        </p>
+                        </div>
+                    </div>
+                </div>
 
-                    </p>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- Signup-->
+
+        <section class="signup-section" id="src">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto text-left">
+                        <i class="fas fa-asterisk fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Källor</h2>
+                        
+                        <p class="text-white">Böcker:</br>
+                            JavaScript & jQuery: Interactive front-end web development av Jon Duckett (2014), Kapitel 5: Document Object Model</p>
+                        <p class="text-white">Webbsidor:</br>
+                            https://en.wikipedia.org/wiki/Document_Object_Model<br>
+                            https://en.wikipedia.org/wiki/Netscape_(web_browser)#Netscape_Navigator_(versions_1.0%E2%80%933.0)<br>
+                            https://www.w3schools.com/js/js_htmldom.asp<br>
+                            https://www.w3schools.com/js/js_htmldom_methods.asp<br>
+                            https://www.w3schools.com/js/js_htmldom_navigation.asp<br>
+                            https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction<br>
+                            https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core</p>
+                            http://orion.lnu.se/pub/education/course/1DV435/ht13/lecture07/F07-DOM.pdf <br>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-            <div class="col-12 bg-white">
-                <div class="project-text w-100 my-auto text-center text-lg-left">
-                    <h4 class="text-black-50">Attributnoder</h4>
-                    <p class="mb-0 text-black-50">De egenskaper som hör till html-element kan nås med specifika nyckelord och hämta, skriva eller ta bort egenskaper hos elementet.</p>
-                    <br>
-                    <p class="mb-0 text-black-50">
+    
 
-                        Changing HTML Elements  (Property)	<br>
-                        element.innerHTML =  new html content, Change the inner HTML of an element <br>
-                        element.attribute = new value, Change the attribute value of an HTML element <br>
-                        element.style.property = new style, Change the style of an HTML element <br>
-                        <br>
-                        Change the attribute value of an HTML element <br>
-                        element.setAttribute(attribute, value) <br>
-
-
-                        Method	Description - Adding and Deleting Elements <br>
-                        document.createElement(element)	Create an HTML element <br>
-                        document.removeChild(element)	Remove an HTML element <br>
-                        document.appendChild(element)	Add an HTML element <br>
-                        document.replaceChild(new, old)	Replace an HTML element <br>
-                        document.write(text)	Write into the HTML output stream <br>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</section>
-
-
-
-
-<!-- Signup-->
-
-<section class="signup-section" id="src">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10text-left">
-                <i class="fas fa-asterisk fa-2x mb-2 text-white"></i>
-                <h2 class="text-white mb-5">Källor</h2>
-
-                <p class="text-white">Böcker:</br>
-                    JavaScript & jQuery: Interactive front-end web development av Jon Duckett (2014), Kapitel 5: Document Object Model</p>
-                <p class="text-white">Webbsidor:</br>
-                    <a href="https://en.wikipedia.org/wiki/Document_Object_Model" target=_blank>Wikipedia: Document Object Model</a><br>
-                    <a href="https://en.wikipedia.org/wiki/Netscape_(web_browser)" target=_blank>Wikipedia: Netscape (web browser)</a><br>
-                    <a href="https://www.w3schools.com/js/js_htmldom.asp" target=_blank>W3Schools: JavaScript HTML DOM</a><br>
-                    <a href="https://www.w3schools.com/js/js_htmldom_methods.asp" target=_blank>W3Schools: JavaScript - HTML DOM Methods</a><br>
-                    <a href="https://www.w3schools.com/js/js_htmldom_navigation.asp" target=_blank>W3Schools: JavaScript HTML DOM EventListener</a><br>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target=_blank>MDN Web Docs: Introduction to the DOM</a><br>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core" target=_blank>MDN Web Docs: Using the W3C DOM Level 1 Core</a>
-                </p>
-
-                <p class="text-white">Bilder:<br>
-                    <a href="https://www.freepik.com/free-vector/artificial-neural-network-training-algorithm-processing-speech-recognition-identity-verification-information-handling-humanoid-cyborg-vector-isolated-concept-metaphor-illustration_11668335.htm#page=1&query=node&position=5" target=_blank>Freepik: Artificial neural network training. algorithm processing...</a><br>
-                    <a href="https://www.freepik.com/free-vector/website-setup-concept-illustration_7769829.htm#page=1&query=frontend&position=5" target=_blank>Freepik: Website setup concept illustration Free Vector</a><br>
-                    <a href="https://medium.com/@kenny.hom27/what-is-a-node-and-how-do-i-build-it-with-javascript-3f50a8866548" target=_blank>Kenny Hom - What is a node and how do I build it with Javascript? (Medium)</a><br>
-
-
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Footer-->
-<footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright-Sobhan&Annika© Your Website 2020</div></footer>
-<!-- Bootstrap core JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-</body>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container">Annika&Sobhan© Your Website 2020</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
